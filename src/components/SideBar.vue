@@ -16,7 +16,7 @@
       </div>
       <nav>
         <ul class="*:font-roboto-medium *:font-semibold *:text-darkBlue *:flex *:items-center *:gap-3 *:p-4 *:cursor-pointer">
-          <li title="Inventario" class="hover:bg-lightBlue">
+          <li title="Inventario" class="hover:bg-lightBlue bg-lightBlue test relative">
             <IconComponent name="inventory" :height=24 :width=24 />
             Inventario
           </li>
@@ -59,3 +59,14 @@
     </div>
   </header>
 </template>
+
+<style scoped>
+  .test::after {
+    content: "";
+    width: 4px;
+    height: 3.5rem;
+    position: absolute;
+    right: 0;
+    background-color: #293B66;
+  }
+</style>
