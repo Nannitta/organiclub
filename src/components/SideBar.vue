@@ -1,7 +1,5 @@
 <script setup>
-  import IconAvatar from "./icons/IconAvatar.vue";
-  import IconSettings from "./icons/IconSettings.vue";
-  import IconPower from "./icons/IconPower.vue";
+  import IconComponent from "./icons/IconComponent.vue"
   import { ref } from "vue";
 
   const hoveredAvatar = ref(false);
@@ -14,24 +12,24 @@
     <div>
       <div class="flex justify-between p-4">
         <img src="../assets/organiclub.webp" alt="Logo corporativo" class="w-32">
-        <img src="../assets/icons/menu.svg" alt="Menú">
+        <IconComponent name="menu" :height=24 :width=24 />
       </div>
       <nav>
-        <ul class="*:font-roboto-medium *:font-semibold *:text-darkBlue *:flex *:items-center *:gap-3 *:p-4">
+        <ul class="*:font-roboto-medium *:font-semibold *:text-darkBlue *:flex *:items-center *:gap-3 *:p-4 *:cursor-pointer">
           <li title="Inventario" class="hover:bg-lightBlue">
-            <img src="../assets/icons/inventory.svg" alt="Icono de inventario">
+            <IconComponent name="inventory" :height=24 :width=24 />
             Inventario
           </li>
           <li title="Gestión de ventas" class="hover:bg-lightBlue">
-            <img src="../assets/icons/sell.svg" alt="Icono de gestión de ventas">
+            <IconComponent name="sell" :height=24 :width=24 />
             Gestión de ventas
           </li>
           <li title="Recibos" class="hover:bg-lightBlue">
-            <img src="../assets/icons/receipt.svg" alt="Icono de recibos">
+            <IconComponent name="receipt" :height=24 :width=24 />
             Recibos
           </li>
           <li title="Pedidos" class="hover:bg-lightBlue">
-            <img src="../assets/icons/cart.svg" alt="Icono de pedidos">
+            <IconComponent name="cart" :height=24 :width=24 />
             Pedidos
           </li>
         </ul>
@@ -41,19 +39,19 @@
       <ul>
         <li title="Perfil" class="*:font-roboto-medium *:font-semibold *:text-menuNav *:flex *:items-center *:gap-3 *:p-4 *:hover:text-darkBlue" @mouseover="hoveredAvatar=true" @mouseleave="hoveredAvatar=false">
           <button>
-            <IconAvatar fill="#293b66bf" :hovered="hoveredAvatar"/>
+            <IconComponent name="avatar" :height=24 :width=24 :hovered="hoveredAvatar"/>
             Perfil
           </button>
         </li>
         <li title="Configuración" class="*:font-roboto-medium *:font-semibold *:text-menuNav *:flex *:items-center *:gap-3 *:p-4 *:hover:text-darkBlue" @mouseover="hoveredSettings=true" @mouseleave="hoveredSettings=false">
           <button>
-            <IconSettings fill="#293b66bf" :hovered="hoveredSettings"/>
+            <IconComponent name="settings" :height=24 :width=24 :hovered="hoveredSettings"/>
             Configuración
           </button>
         </li>
         <li title="Cerrar sesión" class="*:font-roboto-medium *:font-semibold *:text-menuNav *:flex *:items-center *:gap-3 *:p-4 *:hover:text-darkBlue" @mouseover="hoveredPower=true" @mouseleave="hoveredPower=false">
           <button>
-            <IconPower fill="#293b66bf" :hovered="hoveredPower"/>
+            <IconComponent name="powerSettings" :height=24 :width=24 :hovered="hoveredPower"/>
             Cerrar sesión
           </button>
         </li>
