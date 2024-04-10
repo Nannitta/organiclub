@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "title": "Karategi Mizuno KIAI",
+    "description": "Karategi Mizuno modelo Kiai para entrenamiento.",
+    "price": 21.00,
+    "cost-price": 15.00,
+    "supplier": "Daimyo ",
+    "stock": 15,
+    "min-stock": 5,
+    "durability": 12,
+    "category": "Karateguis",
+    "image": "https://www.tagoya.com/2509-large_default/karategi-mizuno-kiai.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Karategi negro",
+    "description": "Traje negro de entrenamiento para kenpo o defensa.",
+    "price": 24.00,
+    "cost-price": 16.00,
+    "supplier": "Daimyo",
+    "stock": 4,
+    "min-stock": 5,
+    "durability": 12,
+    "category": "Karateguis",
+    "image": "https://www.tagoya.com/1954-large_default/traje-negro-de-entrenamiento-8-onzas-65-poliester-35-algodon.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Cinturon de Karate para competición",
+    "description": "Cinto de Karate para kumite y kata.",
+    "price": 6.00,
+    "cost-price": 3.00,
+    "supplier": "Tagoya",
+    "stock": 12,
+    "min-stock": 5,
+    "durability": 12,
+    "category": "Cinturones",
+    "image": "https://www.tagoya.com/143-large_default/cinturon-de-karate-para-competicion-de-4cm-algodon.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Cinturón negro Mizuno bordado Karatedo",
+    "description": "Cinturón negro Mizuno homologado por la WKF.",
+    "price": 30.00,
+    "cost-price": 14.00,
+    "supplier": "Daedo",
+    "stock": 5,
+    "min-stock": 5,
+    "durability": 12,
+    "category": "Cinturones",
+    "image": "https://www.tagoya.com/2866-large_default/cinturon-negro-mizuno-bordado-karatedo.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Cinturon de Karate para competición infantil",
+    "description": "Cinto de Karate para kumite y kata.",
+    "price": 6.00,
+    "cost-price": 3.00,
+    "supplier": "Tagoya",
+    "stock": 16,
+    "min-stock": 5,
+    "durability": 12,
+    "category": "Cinturones",
+    "image": "https://www.tagoya.com/3149-large_default/cinturon-de-karate-para-competicion-infantil-algodon.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Casco homologado karate",
+    "description": "Casco homologado de karate infantil competición kumite.",
+    "price": 50.00,
+    "cost-price": 30.00,
+    "supplier": "Daedo",
+    "stock": 10,
+    "min-stock": 5,
+    "durability": 18,
+    "category": "Protecciones",
+    "image": "https://www.tagoya.com/167-large_default/casco-homologado-daedo-karate-infantil-competicion-kumite.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Guantilla karate kumite homologada RFEK con pulgar",
+    "description": "Protección de puño azul kumite homologada RFEK.",
+    "price": 22.00,
+    "cost-price": 12.00,
+    "supplier": "Tagoya",
+    "stock": 8,
+    "min-stock": 5,
+    "durability": 18,
+    "category": "Protecciones",
+    "image": "https://www.tagoya.com/215-large_default/guantilla-con-pulgar-azul-kumite-homologada-rfek.jpg"
+  }
+]
