@@ -54,6 +54,10 @@ export const useInventoryStore = defineStore('InventoryStore', () => {
     }
   }
 
+  const addProduct = (formValues) => {
+    products.value.push(formValues)
+  }
+
   return {
     products,
     getProducts,
@@ -63,6 +67,7 @@ export const useInventoryStore = defineStore('InventoryStore', () => {
     counterCategories,
     alertProductStock,
     alertStock,
-    deleteProduct
+    deleteProduct,
+    addProduct
   }
 })
