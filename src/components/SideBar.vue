@@ -1,10 +1,21 @@
 <script setup>
 import IconComponent from './icons/IconComponent.vue'
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
+import { useInventoryStore } from '../stores/inventoryStore.js'
+import { storeToRefs } from 'pinia'
+
+const inventoryStore = useInventoryStore()
+const { getProducts, alertProductStock } = inventoryStore
+const { products, alertStock } = storeToRefs(inventoryStore)
 
 const hoveredAvatar = ref(false)
 const hoveredSettings = ref(false)
 const hoveredPower = ref(false)
+
+onMounted(async () => {
+  await getProducts()
+  alertProductStock(products.value)
+})
 </script>
 
 <template>
@@ -20,10 +31,11 @@ const hoveredPower = ref(false)
         <ul
           class="*:font-roboto-medium *:font-semibold *:text-darkBlue *:flex *:items-center *:gap-3 *:p-4 *:cursor-pointer"
         >
-          <li title="Inventario" class="hover:bg-lightBlue bg-lightBlue test relative">
+          <li title="Inventario" class="hover:bg-lightBlue bg-lightBlue selected relative">
             <IconComponent name="inventory" :height="24" :width="24" />
             <div
-              class="w-2 h-2 bg-[#DF0E0E] rounded-full absolute top-1/2 transform -translate-y-1/2 right-5"
+              v-if="alertStock"
+              class="w-2 h-2 bg-red rounded-full absolute top-1/2 transform -translate-y-1/2 right-5"
             ></div>
             Inventario
           </li>
@@ -83,7 +95,7 @@ const hoveredPower = ref(false)
 </template>
 
 <style scoped>
-.test::after {
+.selected::after {
   content: '';
   width: 4px;
   height: 3.5rem;
