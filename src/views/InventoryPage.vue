@@ -6,7 +6,8 @@ import { storeToRefs } from 'pinia'
 import IconComponent from '../components/icons/IconComponent.vue'
 
 const inventoryStore = useInventoryStore()
-const { getProducts, getCategoryProducts, countStockByCategory, deleteProduct } = inventoryStore
+const { getProducts, getCategoryProducts, countStockByCategory, deleteProduct, addProduct } =
+  inventoryStore
 const { categoryProducts, products, counterCategories } = storeToRefs(inventoryStore)
 
 const hovered = ref(false)
@@ -14,6 +15,20 @@ const searchItem = ref('')
 const deleteOpen = ref(false)
 const deletProduct = ref('')
 const productId = ref(0)
+const addModalOpen = ref(false)
+const formValues = ref({
+  title: '',
+  description: '',
+  price: 0,
+  'cost-price': 0,
+  supplier: '',
+  stock: 0,
+  'min-stock': 0,
+  durability: 0,
+  category: '',
+  image: ''
+})
+const previewImg = ref('')
 
 onMounted(async () => {
   await getProducts()
@@ -22,9 +37,9 @@ onMounted(async () => {
 })
 
 const filteredProducts = computed(() => {
-  const value = searchItem.value.toLowerCase().trim()
+  const value = searchItem.value?.toLowerCase().trim()
   const actualProducts = products.value.filter((product) =>
-    product.title.toLowerCase().includes(value)
+    product.title?.toLowerCase().includes(value)
   )
   return actualProducts
 })
@@ -37,6 +52,37 @@ const showDeleteConfirm = (product) => {
   deletProduct.value = product.title
   deleteOpen.value = true
   productId.value = product.id
+}
+
+const showAddModal = () => {
+  addModalOpen.value = true
+}
+
+const getImage = (e) => {
+  formValues.value.image = e.target.files[0]
+  previewImg.value = URL.createObjectURL(formValues.value.image)
+}
+
+const resetForm = () => {
+  formValues.value = {
+    title: '',
+    description: '',
+    price: 0,
+    'cost-price': 0,
+    supplier: '',
+    stock: 0,
+    'min-stock': 0,
+    durability: 0,
+    category: '',
+    image: ''
+  }
+  previewImg.value = ''
+}
+
+const submitForm = () => {
+  addProduct(formValues.value)
+  addModalOpen.value = false
+  resetForm()
 }
 </script>
 
@@ -69,6 +115,7 @@ const showDeleteConfirm = (product) => {
           @mouseover="hovered = true"
           @mouseleave="hovered = false"
           title="Añadir producto"
+          @click="showAddModal()"
         >
           AÑADIR PRODUCTO
           <IconComponent
@@ -131,6 +178,148 @@ const showDeleteConfirm = (product) => {
             </tr>
           </tbody>
         </table>
+        <div
+          v-if="addModalOpen"
+          class="fixed inset-0 flex items-center justify-center backdrop-blur-sm"
+        >
+          <div
+            class="bg-white p-8 rounded-md shadow-md w-3/5 h-[90%] flex flex-col justify-around gap-4"
+          >
+            <form
+              class="flex flex-col *:text-darkBlue *:font-roboto-bold gap-4"
+              @submit.prevent="submitForm"
+            >
+              <label for="title" class="font-bold flex flex-col gap-2">
+                Nombre del producto
+                <input
+                  v-model="formValues.title"
+                  type="text"
+                  name="title"
+                  class="bg-white focus:outline-none shadow-inner shadow-lightBlue py-2 px-4 rounded-xl font-normal"
+                />
+              </label>
+              <label for="description" class="font-bold flex flex-col gap-2">
+                Descripción
+                <textarea
+                  v-model="formValues.description"
+                  type="text"
+                  name="description"
+                  class="bg-white focus:outline-none shadow-inner shadow-lightBlue py-2 px-4 rounded-xl font-normal resize-none"
+                  rows="5"
+                ></textarea>
+              </label>
+              <div class="flex gap-6 *:gap-2">
+                <label for="price" class="font-bold flex flex-col">
+                  Precio de venta
+                  <input
+                    v-model="formValues.price"
+                    type="number"
+                    name="price"
+                    class="bg-white focus:outline-none shadow-inner shadow-lightBlue py-2 px-4 rounded-xl font-normal"
+                  />
+                </label>
+                <label for="cost-price" class="font-bold flex flex-col">
+                  Precio de costo
+                  <input
+                    v-model="formValues['cost-price']"
+                    type="number"
+                    name="cost-price"
+                    class="bg-white focus:outline-none shadow-inner shadow-lightBlue py-2 px-4 rounded-xl font-normal"
+                  />
+                </label>
+              </div>
+              <label for="supplier" class="font-bold flex flex-col gap-2">
+                Proveedor
+                <input
+                  v-model="formValues.supplier"
+                  type="text"
+                  name="supplier"
+                  class="bg-white focus:outline-none shadow-inner shadow-lightBlue py-2 px-4 rounded-xl font-normal"
+                />
+              </label>
+              <div class="flex gap-6 *:gap-2">
+                <label for="stock" class="font-bold flex flex-col">
+                  Cantidad en stock
+                  <input
+                    v-model="formValues.stock"
+                    type="number"
+                    name="stock"
+                    class="bg-white focus:outline-none shadow-inner shadow-lightBlue py-2 px-4 rounded-xl font-normal"
+                  />
+                </label>
+                <label for="min-stock" class="font-bold flex flex-col">
+                  Mínimo de stock deseado
+                  <input
+                    v-model="formValues['min-stock']"
+                    type="number"
+                    name="min-stock"
+                    class="bg-white focus:outline-none shadow-inner shadow-lightBlue py-2 px-4 rounded-xl font-normal"
+                  />
+                </label>
+                <label for="durability" class="font-bold flex flex-col">
+                  Durabilidad en meses
+                  <input
+                    v-model="formValues.durability"
+                    type="number"
+                    name="durability"
+                    max="12"
+                    class="bg-white focus:outline-none shadow-inner shadow-lightBlue py-2 px-4 rounded-xl font-normal"
+                  />
+                </label>
+              </div>
+              <label for="category" class="font-bold flex flex-col gap-2">
+                Categoría
+                <select
+                  v-model="formValues.category"
+                  name="category"
+                  id="category"
+                  class="font-normal bg-white focus:outline-none shadow-inner shadow-lightBlue py-2 px-4 rounded-xl"
+                >
+                  <option value="Karategis" class="bg-white">Karategis</option>
+                  <option value="Cinturones" class="bg-white">Cinturones</option>
+                  <option value="Protecciones" class="bg-white">Protecciones</option>
+                </select>
+              </label>
+              <div class="flex gap-4">
+                <label
+                  htmlFor="photo"
+                  className="flex gap-4 border border-darkBlue py-2 px-6 rounded-2xl font-bold text-darkBlue cursor-pointer w-[330px]"
+                >
+                  AÑADIR FOTO DEL PRODUCTO
+                  <IconComponent name="photo" :hovered="(hovered = true)" />
+                  <input
+                    @change="getImage"
+                    className="hidden w-full cursor-pointer mt-2 text-sm font-medium"
+                    id="photo"
+                    type="file"
+                    name="photo"
+                  />
+                </label>
+                <img
+                  v-if="previewImg"
+                  :src="previewImg"
+                  alt="Previsualización de la imagen"
+                  class="w-12 h-12"
+                />
+              </div>
+              <div class="self-center flex gap-9">
+                <button
+                  type="submit"
+                  class="rounded-xl border border-darkBlue px-8 py-4 text-darkBlue font-bold hover:bg-darkBlue hover:text-white"
+                >
+                  CONFIRMAR
+                </button>
+                <button
+                  type="button"
+                  @click="(addModalOpen = false), resetForm()"
+                  class="rounded-xl border border-red bg-red px-8 py-4 text-white font-bold hover:bg-white hover:text-red"
+                >
+                  CANCELAR
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
         <div
           v-if="deleteOpen"
           class="fixed inset-0 flex items-center justify-center backdrop-blur-sm"
