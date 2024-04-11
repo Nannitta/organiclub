@@ -1,6 +1,6 @@
 <script setup>
 import WelcomeCard from '../components/WelcomeCard.vue'
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, computed } from 'vue'
 import { useInventoryStore } from '../stores/inventoryStore.js'
 import { storeToRefs } from 'pinia'
 import IconComponent from '../components/icons/IconComponent.vue'
@@ -10,12 +10,25 @@ const { getProducts, getCategoryProducts, countStockByCategory } = inventoryStor
 const { categoryProducts, products, counterCategories } = storeToRefs(inventoryStore)
 
 const hovered = ref(true)
+const searchItem = ref('')
 
 onMounted(async () => {
   await getProducts()
   getCategoryProducts()
   countStockByCategory(products.value)
 })
+
+const filteredProducts = computed(() => {
+  const value = searchItem.value.toLowerCase().trim()
+  const actualProducts = products.value.filter((product) =>
+    product.title.toLowerCase().includes(value)
+  )
+  return actualProducts
+})
+
+const onChangeInput = (e) => {
+  searchItem.value = e.target.value
+}
 </script>
 
 <template>
@@ -30,7 +43,7 @@ onMounted(async () => {
           <template v-for="category in categoryProducts" :key="category">
             <span class="pl-6 relative flex justify-between">
               <div
-                v-if="category === 'Karateguis'"
+                v-if="category === 'Karategis'"
                 class="w-2 h-2 bg-[#DF0E0E] rounded-full absolute top-1/2 transform -translate-y-1/2 left-0"
               ></div>
               {{ category }}
@@ -51,10 +64,16 @@ onMounted(async () => {
           type="text"
           placeholder="Buscador de productos"
           class="mt-7 bg-white border-b border-menuNav w-full pb-2 placeholder-menuNav focus:outline-none"
+          v-model="searchItem"
+          @input="onChangeInput"
         />
       </div>
       <div class="overflow-hidden flex-1 last:rounded-xl overflow-y-auto">
-        <table class="text-black w-full">
+        <div v-if="filteredProducts.length === 0" class="pl-6 flex items-center gap-6">
+          <img src="../assets/noProducts.webp" alt="Producto no encontrado" class="w-40" />
+          <p>No hay ningún producto que coincida con tu búsqueda</p>
+        </div>
+        <table class="text-black w-full" v-if="filteredProducts.length > 0">
           <thead>
             <th class="pb-4"></th>
             <th class="w-[412px] text-left pb-4">Nombre</th>
@@ -64,7 +83,11 @@ onMounted(async () => {
             <th class="w-36 pb-4">Stock disponible</th>
             <th class="pb-4"></th>
           </thead>
-          <tbody v-for="product in products" :key="product.id" class="even:bg-backgroundTable">
+          <tbody
+            v-for="product in filteredProducts"
+            :key="product.id"
+            class="even:bg-backgroundTable"
+          >
             <tr class="h-[70px]">
               <td class="w-[84px] px-6 relative">
                 <div

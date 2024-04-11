@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Cinturon de Karate para competición",
+    "title": "Cinturón de Karate para competición",
     "description": "Cinto de Karate para kumite y kata.",
     "price": 6.0,
     "cost-price": 3.0,
@@ -22,7 +22,7 @@
     "stock": 15,
     "min-stock": 5,
     "durability": 12,
-    "category": "Karateguis",
+    "category": "Karategis",
     "image": "https://www.tagoya.com/2509-large_default/karategi-mizuno-kiai.jpg"
   },
   {
@@ -35,7 +35,7 @@
     "stock": 4,
     "min-stock": 5,
     "durability": 12,
-    "category": "Karateguis",
+    "category": "Karategis",
     "image": "https://www.tagoya.com/1954-large_default/traje-negro-de-entrenamiento-8-onzas-65-poliester-35-algodon.jpg"
   },
   {
@@ -53,7 +53,7 @@
   },
   {
     "id": 5,
-    "title": "Cinturon de Karate para competición infantil",
+    "title": "Cinturón de Karate para competición infantil",
     "description": "Cinto de Karate para kumite y kata.",
     "price": 6.0,
     "cost-price": 3.0,
