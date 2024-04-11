@@ -6,6 +6,7 @@ export const useInventoryStore = defineStore('InventoryStore', () => {
   const products = ref([])
   const categoryProducts = ref([])
   const counterCategories = ref([])
+  const alertStock = ref(false)
 
   const getProducts = async () => {
     products.value = await getProductsService()
@@ -38,12 +39,30 @@ export const useInventoryStore = defineStore('InventoryStore', () => {
     counterCategories.value = counter
   }
 
+  const alertProductStock = (inventory) => {
+    inventory.some((product) => {
+      if (product.stock < 5) {
+        alertStock.value = true
+      }
+    })
+  }
+
+  const deleteProduct = (productId) => {
+    const newProducts = products.value.findIndex((product) => product.id === productId)
+    if (newProducts !== -1) {
+      products.value.splice(newProducts, 1)
+    }
+  }
+
   return {
     products,
     getProducts,
     categoryProducts,
     getCategoryProducts,
     countStockByCategory,
-    counterCategories
+    counterCategories,
+    alertProductStock,
+    alertStock,
+    deleteProduct
   }
 })
