@@ -24,7 +24,9 @@ const props = defineProps({
   name: {
     type: String,
     required: true
-  }
+  },
+  stroke: String,
+  strokeHover: String
 })
 
 let Icon = defineAsyncComponent(() => import(`../../assets/icons/${props.name}.svg`))
@@ -36,5 +38,10 @@ watch(
 </script>
 
 <template>
-  <Icon :heigth="height" :width="width" :fill="hovered ? fillHover : fill" />
+  <Icon
+    :heigth="height"
+    :width="width"
+    :fill="hovered ? fillHover : fill"
+    :stroke="hovered ? strokeHover : stroke"
+  />
 </template>

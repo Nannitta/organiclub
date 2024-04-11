@@ -56,9 +56,21 @@ const onChangeInput = (e) => {
     <section class="mx-4 mb-4 bg-white rounded-xl flex-1 shadow-xl">
       <div class="p-6">
         <button
-          class="font-roboto-black font-black text-darkBlue flex items-center gap-3 p-4 bg-orange rounded-lg shadow-xl"
+          class="font-roboto-black font-black text-darkBlue flex items-center gap-3 p-4 bg-orange rounded-lg shadow-xl hover:scale-105 hover:text-white"
+          @mouseover="hovered = true"
+          @mouseleave="hovered = false"
         >
-          AÑADIR PRODUCTO <IconComponent name="plus" :width="16" :heigth="16" :hovered="hovered" />
+          AÑADIR PRODUCTO
+          <IconComponent
+            name="plus"
+            :width="16"
+            :heigth="16"
+            :hovered="hovered"
+            fill="#293B66"
+            fillHover="#F5F5F5"
+            stroke="#293B66"
+            strokeHover="#F5F5F5"
+          />
         </button>
         <input
           type="text"
