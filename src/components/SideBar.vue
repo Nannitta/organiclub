@@ -20,7 +20,7 @@ onMounted(async () => {
 
 <template>
   <header
-    class="lg:w-[264px] lg:h-screen flex flex-col justify-between bg-white shadow-md shadow-right"
+    class="min-w-[264px] h-screen flex flex-col justify-between bg-white shadow-md shadow-right"
   >
     <div>
       <div class="flex justify-between p-4">
@@ -28,26 +28,29 @@ onMounted(async () => {
         <IconComponent name="menu" :height="24" :width="24" />
       </div>
       <nav>
-        <ul
-          class="*:font-roboto-medium *:font-semibold *:text-darkBlue *:flex *:items-center *:gap-3 *:p-4 *:cursor-pointer"
-        >
-          <li title="Inventario" class="hover:bg-lightBlue bg-lightBlue selected relative">
-            <IconComponent name="inventory" :height="24" :width="24" />
-            <div
-              v-if="alertStock"
-              class="w-2 h-2 bg-red rounded-full absolute top-1/2 transform -translate-y-1/2 right-5"
-            ></div>
-            Inventario
+        <ul class="*:font-roboto-medium *:font-semibold *:text-darkBlue">
+          <li title="Inventario" class="hover:bg-lightBlue bg-lightBlue">
+            <RouterLink to="/" class="flex items-center gap-3 p-4 cursor-pointer selected relative">
+              <IconComponent name="inventory" :height="24" :width="24" />
+              <div
+                v-if="alertStock"
+                class="w-2 h-2 bg-red rounded-full absolute top-1/2 transform -translate-y-1/2 right-5"
+              ></div>
+              Inventario
+            </RouterLink>
           </li>
-          <li title="Gestión de ventas" class="hover:bg-lightBlue">
+          <li
+            title="Gestión de ventas"
+            class="hover:bg-lightBlue flex items-center gap-3 p-4 cursor-pointer"
+          >
             <IconComponent name="sell" :height="24" :width="24" />
             Gestión de ventas
           </li>
-          <li title="Recibos" class="hover:bg-lightBlue">
+          <li title="Recibos" class="hover:bg-lightBlue flex items-center gap-3 p-4 cursor-pointer">
             <IconComponent name="receipt" :height="24" :width="24" />
             Recibos
           </li>
-          <li title="Pedidos" class="hover:bg-lightBlue">
+          <li title="Pedidos" class="hover:bg-lightBlue flex items-center gap-3 p-4 cursor-pointer">
             <IconComponent name="cart" :height="24" :width="24" />
             Pedidos
           </li>
@@ -104,4 +107,3 @@ onMounted(async () => {
   background-color: #293b66;
 }
 </style>
-onMounted,
