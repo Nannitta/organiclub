@@ -4,6 +4,7 @@ import { onMounted, ref, computed } from 'vue'
 import { useInventoryStore } from '../stores/inventoryStore.js'
 import { storeToRefs } from 'pinia'
 import IconComponent from '../components/icons/IconComponent.vue'
+import { router } from '../router/index.js'
 
 const inventoryStore = useInventoryStore()
 const { getProducts, getCategoryProducts, countStockByCategory, deleteProduct, addProduct } =
@@ -137,7 +138,7 @@ const submitForm = () => {
           @input="onChangeInput"
         />
       </div>
-      <div class="overflow-hidden flex-1 last:rounded-xl overflow-y-auto">
+      <div class="flex-1 last:rounded-xl w-full h-[530px] overflow-y-auto">
         <div v-if="filteredProducts.length === 0" class="pl-6 flex items-center gap-6">
           <img src="../assets/noProducts.webp" alt="Producto no encontrado" class="w-40" />
           <p>No hay ningún producto que coincida con tu búsqueda</p>
@@ -152,12 +153,13 @@ const submitForm = () => {
             <th class="w-36 pb-4">Stock disponible</th>
             <th class="pb-4"></th>
           </thead>
-          <tbody
-            v-for="product in filteredProducts"
-            :key="product.id"
-            class="even:bg-backgroundTable"
-          >
-            <tr class="h-[70px]">
+          <tbody class="even:bg-backgroundTable">
+            <tr
+              class="h-[70px] cursor-pointer"
+              v-for="product in filteredProducts"
+              :key="product.id"
+              @click="router.push('/' + product.id)"
+            >
               <td class="w-[84px] px-6 relative">
                 <div
                   v-if="product.stock < 5"
