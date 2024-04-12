@@ -158,7 +158,6 @@ const submitForm = () => {
               class="h-[70px] cursor-pointer"
               v-for="(product, index) in filteredProducts"
               :key="product.id"
-              @click="router.push('/' + product.id)"
               :class="index % 2 === 0 ? 'bg-backgroundTable' : 'bg-white'"
             >
               <td class="w-[84px] px-6 relative">
@@ -173,7 +172,10 @@ const submitForm = () => {
               <td class="text-center">{{ product.category }}</td>
               <td class="text-center">{{ product.price }}.00 €</td>
               <td class="text-center">{{ product.stock }}</td>
-              <td class="text-right pr-6">
+              <td class="text-right pr-6 flex gap-4 justify-center items-center">
+                <button @click="router.push('/' + product.id)">
+                  <IconComponent name="arrow" :width="24" :height="24" />
+                </button>
                 <button @click="showDeleteConfirm(product)">
                   <IconComponent name="delete" :width="24" :height="24" />
                 </button>
