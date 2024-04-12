@@ -28,6 +28,8 @@ const formValues = ref({
   image: ''
 })
 const previewImg = ref('')
+const labels = ref(['Pendiente', 'Falta menos de 1 mes', 'En buen estado'])
+const series = ref([50, 10, 40])
 
 const getInitialData = async () => {
   await getProducts()
@@ -145,7 +147,12 @@ const submitForm = () => {
         </article>
         <article class="bg-white mt-4 flex-1 p-6 rounded-xl shadow-md">
           <h2 class="font-roboto-bold font-bold text-3xl text-darkBlue mb-4">Gráfica de estados</h2>
-          <PieChart />
+          <PieChart
+            :labelsInputs="labels"
+            :seriesInputs="series"
+            :widthChart="450"
+            :heigthChart="350"
+          />
         </article>
       </div>
       <div class="bg-white rounded-xl shadow-md mt-4 mx-4 flex-1 h-[730px]">
