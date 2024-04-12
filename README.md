@@ -10,6 +10,8 @@ Para el desarrollo de este prototipo, se utilizó
 Vue.js como framework principal, Tailwind CSS para el diseño y Pinia para
 la gestión del estado (store).
 
+Diseñado con [Figma](https://www.figma.com/file/lAys77iOK1VZAf9fNvbLuW/OrganiClub?type=design&node-id=0%3A1&mode=design&t=IoOxNKAPe616R0N5-1) 🎨
+
 ⏩⏩ [Sitio web](https://organiclub-prueba-tecnica.vercel.app/) 🌐
 
 <div align="center"><img src='./docs/mockup.png' width='500'/></div>
