@@ -12,7 +12,7 @@ export default {
         'roboto-thin': ['roboto-thin', 'sans-serif']
       },
       backgroundImage: {
-        receipt: 'url(./src/assets/logo.webp)'
+        receipt: 'url(/logo.webp)'
       }
     },
     colors: {
