@@ -18,3 +18,10 @@ export const getClientsService = async () => {
 
   return clients
 }
+
+export const getSalesService = async () => {
+  const data = await fetch('./src/mockups/Sales.json')
+  const sales = await data.json()
+
+  return sales
+}
