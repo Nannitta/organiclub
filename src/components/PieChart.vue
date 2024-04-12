@@ -12,7 +12,6 @@
 
 <script>
 import VueApexCharts from 'vue3-apexcharts'
-
 const leyendColors = ['#263652', '#EBAD31', '#507CB8']
 
 export default {
