@@ -6,6 +6,7 @@ import { useRoute } from 'vue-router'
 import { useInventoryStore } from '../stores/inventoryStore'
 import IconComponent from '../components/icons/IconComponent.vue'
 import InfoCard from '../components/InfoCard.vue'
+import PieChart from '../components/PieChart.vue'
 
 const productStore = useProductStore()
 const { getSuppliers, getSupplierByProduct, getProduct, getClients, editProduct } = productStore
@@ -143,7 +144,8 @@ const submitForm = () => {
           </div>
         </article>
         <article class="bg-white mt-4 flex-1 p-6 rounded-xl shadow-md">
-          <h2 class="font-roboto-bold font-bold text-3xl text-darkBlue">Gráfica de estados</h2>
+          <h2 class="font-roboto-bold font-bold text-3xl text-darkBlue mb-4">Gráfica de estados</h2>
+          <PieChart />
         </article>
       </div>
       <div class="bg-white rounded-xl shadow-md mt-4 mx-4 flex-1 h-[730px]">
