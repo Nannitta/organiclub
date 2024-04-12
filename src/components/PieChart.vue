@@ -1,39 +1,50 @@
+<template>
+  <div class="example">
+    <apexcharts
+      width="450"
+      height="340"
+      type="donut"
+      :options="chartOptions"
+      :series="series"
+    ></apexcharts>
+  </div>
+</template>
+
 <script>
 import VueApexCharts from 'vue3-apexcharts'
+const leyendColors = ['#263652', '#EBAD31', '#507CB8']
 
 export default {
-  name: 'StateChart',
+  name: 'ChartDonut',
   components: {
     apexcharts: VueApexCharts
   },
   data: function () {
     return {
-      series: [44, 55, 41, 17, 15],
       chartOptions: {
-        chart: {
-          type: 'donut'
-        },
-        responsive: [
-          {
-            breakpoint: 480,
-            options: {
-              chart: {
-                width: 200
-              },
-              legend: {
-                position: 'bottom'
-              }
-            }
+        dataLabels: {
+          background: {
+            enabled: false
+          },
+          dropShadow: {
+            enabled: false
           }
-        ]
-      }
+        },
+        colors: leyendColors,
+        legend: {
+          position: 'top',
+          offsetY: 1
+        },
+        labels: ['En buen estado', 'Falta menos de 1 mes', 'Pendiente'],
+        plotOptions: {
+          pie: {
+            customScale: 1
+          }
+        }
+      },
+
+      series: [50, 10, 40]
     }
   }
 }
 </script>
-
-<template>
-  <div class="example">
-    <apexcharts height="350" :options="chartOptions"></apexcharts>
-  </div>
-</template>
