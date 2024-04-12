@@ -3,12 +3,14 @@ import InfoCard from '../components/InfoCard.vue'
 import WelcomeCard from '../components/WelcomeCard.vue'
 import { storeToRefs } from 'pinia'
 import { useReceiptsStore } from '../stores/receiptsStore'
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 import IconComponent from '../components/icons/IconComponent.vue'
+import ReceiptCard from '../components/ReceiptCard.vue'
 
 const receiptsStore = useReceiptsStore()
-const { getReceipts, getMonthReceipts } = receiptsStore
+const { getReceipts, getMonthReceipts, getReceipt } = receiptsStore
 const { receipts, receiptsLastMonth } = storeToRefs(receiptsStore)
+const seeReceipt = ref(false)
 
 onMounted(async () => {
   await getReceipts()
@@ -22,7 +24,7 @@ onMounted(async () => {
       <InfoCard
         title="RECIBOS ESTE MES"
         :subtitle="receiptsLastMonth"
-        class="bg-white shadow-md rounded-xl w-[30%] mr-4 flex flex-col items-center justify-center font-roboto-black font-black"
+        class="bg-white shadow-md rounded-xl w-[30%] mr-4 flex flex-col items-center justify-center font-roboto-black font-black text-darkBlue"
       />
     </div>
     <article class="bg-white my-4 h-[695px] shadow-md rounded-xl mx-4">
@@ -50,7 +52,12 @@ onMounted(async () => {
               <td class="text-center">{{ receipt.date_issue }}</td>
               <td class="text-center">{{ receipt.total_price }}.00 €</td>
               <td class="text-left pr-6">{{ receipt.concept }}</td>
-              <td title="Ver recibo"><IconComponent name="eye" class="cursor-pointer" /></td>
+              <td
+                title="Ver recibo"
+                @click="getReceipt(receipt.receipt_number), (seeReceipt = true)"
+              >
+                <IconComponent name="eye" class="cursor-pointer" />
+              </td>
               <td class="pr-6" title="Imprimir recibo">
                 <IconComponent name="print" class="cursor-pointer" />
               </td>
@@ -59,5 +66,12 @@ onMounted(async () => {
         </table>
       </div>
     </article>
+    <div v-if="seeReceipt" class="fixed inset-0 flex items-center justify-center backdrop-blur-sm">
+      <div
+        class="bg-receipt bg-cover bg-no-repeat p-8 rounded-md shadow-md w-1/2 h-[30%] flex flex-col justify-around gap-4"
+      >
+        <ReceiptCard :seeReceipt="seeReceipt" @closeModal="seeReceipt = !seeReceipt" />
+      </div>
+    </div>
   </main>
 </template>
