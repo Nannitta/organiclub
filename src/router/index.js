@@ -3,7 +3,7 @@ import InventoryPage from '../views/InventoryPage.vue'
 import ProductPage from '../views/ProductPage.vue'
 import SalesPage from '../views/SalesPage.vue'
 import ReceiptsPage from '../views/ReceiptsPage.vue'
-import PieChart from '../components/PieChart.vue'
+import OrdersPage from '../views/OrdersPage.vue'
 
 export const router = createRouter({
   history: createWebHistory(),
@@ -26,8 +26,8 @@ export const router = createRouter({
       component: ReceiptsPage
     },
     {
-      path: '/test',
-      component: PieChart
+      path: '/orders',
+      component: OrdersPage
     }
   ]
 })

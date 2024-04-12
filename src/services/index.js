@@ -32,3 +32,10 @@ export const getReceiptsService = async () => {
 
   return receipts
 }
+
+export const getOrdersService = async () => {
+  const data = await fetch('./src/mockups/Orders.json')
+  const orders = await data.json()
+
+  return orders
+}

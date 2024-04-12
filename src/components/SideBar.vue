@@ -58,8 +58,10 @@ onMounted(async () => {
             </RouterLink>
           </li>
           <li title="Pedidos" class="hover:bg-lightBlue flex items-center gap-3 p-4 cursor-pointer">
-            <IconComponent name="cart" :height="24" :width="24" />
-            Pedidos
+            <RouterLink to="/orders" class="flex items-center gap-3 cursor-pointer relative w-full">
+              <IconComponent name="cart" :height="24" :width="24" />
+              Pedidos
+            </RouterLink>
           </li>
         </ul>
       </nav>

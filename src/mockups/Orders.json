@@ -1,0 +1,82 @@
+[
+  {
+    "date": "2024-01-10",
+    "orderId": "ORD001",
+    "seller": "Tagoya",
+    "cost": "100",
+    "status": "Pagado",
+    "payment_method": "Tarjeta de crédito"
+  },
+  {
+    "date": "2024-01-12",
+    "orderId": "ORD002",
+    "seller": "Daimyo",
+    "cost": "150",
+    "status": "Pendiente",
+    "payment_method": "-"
+  },
+  {
+    "date": "2024-01-15",
+    "orderId": "ORD003",
+    "seller": "Daedo",
+    "cost": "80",
+    "status": "Pagado",
+    "payment_method": "Tranferencia bancaria"
+  },
+  {
+    "date": "2024-01-18",
+    "orderId": "ORD004",
+    "seller": "Daedo",
+    "cost": "120",
+    "status": "Pendiente",
+    "payment_method": "Efectivo"
+  },
+  {
+    "date": "2024-01-25",
+    "orderId": "ORD005",
+    "seller": "Tagoya",
+    "cost": "90",
+    "status": "Pagado",
+    "payment_method": "-"
+  },
+  {
+    "date": "2024-02-02",
+    "orderId": "ORD006",
+    "seller": "Daedo",
+    "cost": "110",
+    "status": "Pendiente",
+    "payment_method": "Tranferencia bancaria"
+  },
+  {
+    "date": "2024-02-10",
+    "orderId": "ORD007",
+    "seller": "Daimyo",
+    "cost": "200",
+    "status": "Pagado",
+    "payment_method": "Tarjeta de crédito"
+  },
+  {
+    "date": "2024-02-15",
+    "orderId": "ORD008",
+    "seller": "Tagoya",
+    "cost": "85",
+    "status": "Pendiente",
+    "payment_method": "Efectivo"
+  },
+  {
+    "date": "2024-03-22",
+    "orderId": "ORD009",
+    "seller": "Daimyo",
+    "cost": "175",
+    "status": "Pagado",
+    "payment_method": "Tranferencia bancaria"
+  },
+  {
+    "date": "2024-03-27",
+    "orderId": "ORD010",
+    "seller": "Tagoya",
+    "cost": "95",
+    "status": "Pendiente",
+    "payment_method": "Tarjeta de crédito"
+  }
+]
