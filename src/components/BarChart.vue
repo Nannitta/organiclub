@@ -3,7 +3,7 @@
     <apexcharts
       :width="this.widthChart"
       :height="this.heightChart"
-      type="donut"
+      type="bar"
       :options="chartOptions"
       :series="series"
     ></apexcharts>
@@ -13,14 +13,11 @@
 <script>
 import VueApexCharts from 'vue3-apexcharts'
 
-const leyendColors = ['#263652', '#EBAD31', '#507CB8']
+const leyendColors = ['#263652', '#507CB8']
 
 export default {
-  name: 'ChartDonut',
+  name: 'ChartBar',
   props: {
-    labelsInputs: {
-      type: Array
-    },
     seriesInputs: {
       type: Array
     },
@@ -30,7 +27,7 @@ export default {
     },
     heightChart: {
       type: Number,
-      default: 350
+      default: 200
     },
     positionInput: {
       type: String,
@@ -64,11 +61,29 @@ export default {
           position: this.positionInput,
           offsetY: this.offsetYInput
         },
-        labels: this.labelsInputs,
         plotOptions: {
           pie: {
-            customScale: this.scaleInput
+            customScale: this.scaleInput,
+            bar: {
+              horizontal: false
+            }
           }
+        },
+        xaxis: {
+          categories: [
+            'Ene',
+            'Feb',
+            'Mar',
+            'Abr',
+            'May',
+            'Jun',
+            'Jul',
+            'Ago',
+            'Sep',
+            'Oct',
+            'Nov',
+            'Dic'
+          ]
         }
       },
       series: this.seriesInputs
