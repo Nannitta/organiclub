@@ -2,15 +2,15 @@
   {
     "id": 1,
     "first_name": "Juan",
-    "last_name": "Perez",
+    "last_name": "Pérez",
     "contact": "+123456789",
     "purchase_date": "2022-01-15",
     "renewal_date": "2023-01-15"
   },
   {
     "id": 2,
-    "first_name": "Maria",
-    "last_name": "Gomez",
+    "first_name": "Ana María",
+    "last_name": "Gómez",
     "contact": "+987654321",
     "purchase_date": "2022-02-20",
     "renewal_date": "2025-02-20"
@@ -18,7 +18,7 @@
   {
     "id": 3,
     "first_name": "Carlos",
-    "last_name": "Lopez",
+    "last_name": "López",
     "contact": "+112233445",
     "purchase_date": "2023-03-10",
     "renewal_date": "2024-03-10"
@@ -26,15 +26,15 @@
   {
     "id": 4,
     "first_name": "Ana",
-    "last_name": "Martinez",
+    "last_name": "Martínez",
     "contact": "+998877665",
     "purchase_date": "2023-04-05",
     "renewal_date": "2024-04-05"
   },
   {
     "id": 5,
-    "first_name": "Luis",
-    "last_name": "Rodriguez",
+    "first_name": "José Luis",
+    "last_name": "Rodríguez",
     "contact": "+554433221",
     "purchase_date": "2023-05-12",
     "renewal_date": "2024-05-12"
@@ -42,15 +42,15 @@
   {
     "id": 6,
     "first_name": "Laura",
-    "last_name": "Sanchez",
+    "last_name": "Sánchez",
     "contact": "+223344556",
     "purchase_date": "2024-04-25",
     "renewal_date": "2025-04-25"
   },
   {
     "id": 7,
-    "first_name": "Pedro",
-    "last_name": "Gonzalez",
+    "first_name": "Pedro Javier",
+    "last_name": "González",
     "contact": "+778899001",
     "purchase_date": "2024-01-30",
     "renewal_date": "2025-01-30"
@@ -58,7 +58,7 @@
   {
     "id": 8,
     "first_name": "Elena",
-    "last_name": "Diaz",
+    "last_name": "Díaz",
     "contact": "+1122334455",
     "purchase_date": "2023-02-18",
     "renewal_date": "2025-02-18"
@@ -66,7 +66,7 @@
   {
     "id": 9,
     "first_name": "Diego",
-    "last_name": "Hernandez",
+    "last_name": "Hernández",
     "contact": "+5566778899",
     "purchase_date": "2023-09-09",
     "renewal_date": "2025-09-09"
@@ -74,7 +74,7 @@
   {
     "id": 10,
     "first_name": "Sara",
-    "last_name": "Jimenez",
+    "last_name": "Jiménez",
     "contact": "+9988776655",
     "purchase_date": "2024-02-30",
     "renewal_date": "2025-02-30"

@@ -6,6 +6,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-color: #293b66 #f5f5f5;
+  scrollbar-width: thin;
 }
 
 a:hover,
