@@ -10,6 +10,9 @@ export default {
         'roboto-medium': ['roboto-medium', 'sans-serif'],
         'roboto-regular': ['roboto-regular', 'sans-serif'],
         'roboto-thin': ['roboto-thin', 'sans-serif']
+      },
+      backgroundImage: {
+        receipt: 'url(./src/assets/logo.webp)'
       }
     },
     colors: {

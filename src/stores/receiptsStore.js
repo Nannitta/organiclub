@@ -5,6 +5,7 @@ import { getReceiptsService } from '../services/index.js'
 export const useReceiptsStore = defineStore('ReceiptsStore', () => {
   const receipts = ref([])
   let receiptsLastMonth = ref(0)
+  const receiptSelected = ref({})
 
   const getReceipts = async () => {
     receipts.value = await getReceiptsService()
@@ -27,5 +28,14 @@ export const useReceiptsStore = defineStore('ReceiptsStore', () => {
     })
   }
 
-  return { getReceipts, receipts, getMonthReceipts, receiptsLastMonth }
+  const getReceipt = (receiptNumber) => {
+    receipts.value.find((receipt) => {
+      if (receipt.receipt_number === receiptNumber) {
+        console.log(receipt)
+        receiptSelected.value = receipt
+      }
+    })
+  }
+
+  return { getReceipts, receipts, getMonthReceipts, receiptsLastMonth, getReceipt, receiptSelected }
 })
