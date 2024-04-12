@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import InventoryPage from '../views/InventoryPage.vue'
 import ProductPage from '../views/ProductPage.vue'
 import SalesPage from '../views/SalesPage.vue'
+import ReceiptsPage from '../views/ReceiptsPage.vue'
 
 export const router = createRouter({
   history: createWebHistory(),
@@ -18,6 +19,10 @@ export const router = createRouter({
     {
       path: '/sales',
       component: SalesPage
+    },
+    {
+      path: '/receipts',
+      component: ReceiptsPage
     }
   ]
 })

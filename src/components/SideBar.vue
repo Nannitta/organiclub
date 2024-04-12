@@ -43,14 +43,19 @@ onMounted(async () => {
             title="Gestión de ventas"
             class="hover:bg-lightBlue flex items-center gap-3 p-4 cursor-pointer"
           >
-            <RouterLink to="/sales" class="flex items-center gap-3 cursor-pointer relative">
+            <RouterLink to="/sales" class="flex items-center gap-3 cursor-pointer relative w-full">
               <IconComponent name="sell" :height="24" :width="24" />
               Gestión de ventas
             </RouterLink>
           </li>
           <li title="Recibos" class="hover:bg-lightBlue flex items-center gap-3 p-4 cursor-pointer">
-            <IconComponent name="receipt" :height="24" :width="24" />
-            Recibos
+            <RouterLink
+              to="/receipts"
+              class="flex items-center gap-3 cursor-pointer relative w-full"
+            >
+              <IconComponent name="receipt" :height="24" :width="24" />
+              Recibos
+            </RouterLink>
           </li>
           <li title="Pedidos" class="hover:bg-lightBlue flex items-center gap-3 p-4 cursor-pointer">
             <IconComponent name="cart" :height="24" :width="24" />

@@ -6,12 +6,12 @@
     "paying_partner": "Raquel Gomez",
     "price": 4.96,
     "concept": "Compra de Cinturón de Karate para competición",
-    "total_price": 6.00,
+    "total_price": 6.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "10 de abril de 2024"
+    "date_issue": "2024-04-10"
   },
   {
     "receipt_number": "REC030",
@@ -20,12 +20,12 @@
     "paying_partner": "Antonio Ramirez",
     "price": 17.36,
     "concept": "Compra de Karategi Mizuno KIAI",
-    "total_price": 21.00,
+    "total_price": 21.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "5 de abril de 2024"
+    "date_issue": "2024-04-05"
   },
   {
     "receipt_number": "REC029",
@@ -34,12 +34,12 @@
     "paying_partner": "Sara Jimenez",
     "price": 4.96,
     "concept": "Compra de Cinturón de Karate para competición",
-    "total_price": 6.00,
+    "total_price": 6.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "15 de marzo de 2024"
+    "date_issue": "2024-03-10"
   },
   {
     "receipt_number": "REC028",
@@ -48,12 +48,12 @@
     "paying_partner": "Diego Hernandez",
     "price": 24.79,
     "concept": "Compra de Cinturón negro Mizuno bordado Karatedo",
-    "total_price": 30.00,
+    "total_price": 30.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "10 de marzo de 2024"
+    "date_issue": "2024-03-10"
   },
   {
     "receipt_number": "REC027",
@@ -62,12 +62,12 @@
     "paying_partner": "Elena Diaz",
     "price": 17.36,
     "concept": "Compra de Karategi Mizuno KIAI",
-    "total_price": 21.00,
+    "total_price": 21.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "5 de marzo de 2024"
+    "date_issue": "2024-03-05"
   },
   {
     "receipt_number": "REC026",
@@ -76,12 +76,12 @@
     "paying_partner": "Pedro Gonzalez",
     "price": 4.96,
     "concept": "Compra de Cinturón de Karate para competición infantil",
-    "total_price": 6.00,
+    "total_price": 6.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "15 de febrero de 2024"
+    "date_issue": "2024-02-15"
   },
   {
     "receipt_number": "REC025",
@@ -90,12 +90,12 @@
     "paying_partner": "Laura Sanchez",
     "price": 18.18,
     "concept": "Compra de Guantilla karate kumite homologada RFEK con pulgar",
-    "total_price": 22.00,
+    "total_price": 22.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "10 de febrero de 2024"
+    "date_issue": "2024-02-10"
   },
   {
     "receipt_number": "REC024",
@@ -104,12 +104,12 @@
     "paying_partner": "Luis Rodriguez",
     "price": 41.32,
     "concept": "Compra de Casco homologado karate",
-    "total_price": 50.00,
+    "total_price": 50.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "5 de febrero de 2024"
+    "date_issue": "2024-02-05"
   },
   {
     "receipt_number": "REC023",
@@ -118,12 +118,12 @@
     "paying_partner": "Ana Martinez",
     "price": 24.79,
     "concept": "Compra de Cinturón negro Mizuno bordado Karatedo",
-    "total_price": 30.00,
+    "total_price": 30.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "10 de enero de 2024"
+    "date_issue": "2024-01-10"
   },
   {
     "receipt_number": "REC022",
@@ -132,12 +132,12 @@
     "paying_partner": "Carlos Lopez",
     "price": 19.83,
     "concept": "Compra de Karategi negro",
-    "total_price": 24.00,
+    "total_price": 24.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "5 de enero de 2024"
+    "date_issue": "2024-01-05"
   },
   {
     "receipt_number": "REC021",
@@ -146,12 +146,12 @@
     "paying_partner": "Nuria Martinez",
     "price": 4.96,
     "concept": "Compra de Cinturón de Karate para competición",
-    "total_price": 6.00,
+    "total_price": 6.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "10 de diciembre de 2023"
+    "date_issue": "2023-12-10"
   },
   {
     "receipt_number": "REC020",
@@ -160,12 +160,12 @@
     "paying_partner": "Jaime Rodriguez",
     "price": 17.36,
     "concept": "Compra de Karategi Mizuno KIAI",
-    "total_price": 21.00,
+    "total_price": 21.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "5 de diciembre de 2023"
+    "date_issue": "2023-12-05"
   },
   {
     "receipt_number": "REC019",
@@ -174,12 +174,12 @@
     "paying_partner": "David Garcia",
     "price": 4.96,
     "concept": "Compra de Cinturón de Karate para competición infantil",
-    "total_price": 6.00,
+    "total_price": 6.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "10 de noviembre de 2023"
+    "date_issue": "2023-11-10"
   },
   {
     "receipt_number": "REC018",
@@ -188,12 +188,12 @@
     "paying_partner": "Lorena Fernandez",
     "price": 19.83,
     "concept": "Compra de Karategi negro",
-    "total_price": 24.00,
+    "total_price": 24.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "5 de noviembre de 2023"
+    "date_issue": "2023-11-05"
   },
   {
     "receipt_number": "REC017",
@@ -202,12 +202,12 @@
     "paying_partner": "Andres Perez",
     "price": 4.96,
     "concept": "Compra de Cinturón de Karate para competición",
-    "total_price": 6.00,
+    "total_price": 6.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "15 de octubre de 2023"
+    "date_issue": "2023-10-15"
   },
   {
     "receipt_number": "REC016",
@@ -216,12 +216,12 @@
     "paying_partner": "Cristina Lopez",
     "price": 24.79,
     "concept": "Compra de Cinturón negro Mizuno bordado Karatedo",
-    "total_price": 30.00,
+    "total_price": 30.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "10 de septiembre de 2023"
+    "date_issue": "2023-09-10"
   },
   {
     "receipt_number": "REC015",
@@ -230,12 +230,12 @@
     "paying_partner": "Alberto Jimenez",
     "price": 17.36,
     "concept": "Compra de Karategi Mizuno KIAI",
-    "total_price": 21.00,
+    "total_price": 21.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "5 de septiembre de 2023"
+    "date_issue": "2023-09-05"
   },
   {
     "receipt_number": "REC014",
@@ -244,12 +244,12 @@
     "paying_partner": "Laura Fernandez",
     "price": 24.79,
     "concept": "Compra de Cinturón negro Mizuno bordado Karatedo",
-    "total_price": 30.00,
+    "total_price": 30.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "20 de agosto de 2023"
+    "date_issue": "2023-08-20"
   },
   {
     "receipt_number": "REC013",
@@ -258,12 +258,12 @@
     "paying_partner": "Pablo Martinez",
     "price": 19.83,
     "concept": "Compra de Karategi negro",
-    "total_price": 24.00,
+    "total_price": 24.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "15 de agosto de 2023"
+    "date_issue": "2023-08-15"
   },
   {
     "receipt_number": "REC012",
@@ -272,12 +272,12 @@
     "paying_partner": "Raquel Gomez",
     "price": 4.96,
     "concept": "Compra de Cinturón de Karate para competición",
-    "total_price": 6.00,
+    "total_price": 6.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "10 de julio de 2023"
+    "date_issue": "2023-07-10"
   },
   {
     "receipt_number": "REC011",
@@ -286,12 +286,12 @@
     "paying_partner": "Antonio Ramirez",
     "price": 17.36,
     "concept": "Compra de Karategi Mizuno KIAI",
-    "total_price": 21.00,
+    "total_price": 21.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "5 de julio de 2023"
+    "date_issue": "2023-07-05"
   },
   {
     "receipt_number": "REC010",
@@ -300,12 +300,12 @@
     "paying_partner": "Sara Jimenez",
     "price": 4.96,
     "concept": "Compra de Cinturón de Karate para competición",
-    "total_price": 6.00,
+    "total_price": 6.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "15 de junio de 2023"
+    "date_issue": "2023-06-15"
   },
   {
     "receipt_number": "REC009",
@@ -314,12 +314,12 @@
     "paying_partner": "Diego Hernandez",
     "price": 24.79,
     "concept": "Compra de Cinturón negro Mizuno bordado Karatedo",
-    "total_price": 30.00,
+    "total_price": 30.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "10 de mayo de 2023"
+    "date_issue": "2023-05-10"
   },
   {
     "receipt_number": "REC008",
@@ -328,12 +328,12 @@
     "paying_partner": "Elena Diaz",
     "price": 17.36,
     "concept": "Compra de Karategi Mizuno KIAI",
-    "total_price": 21.00,
+    "total_price": 21.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "5 de mayo de 2023"
+    "date_issue": "2023-05-05"
   },
   {
     "receipt_number": "REC007",
@@ -342,12 +342,12 @@
     "paying_partner": "Pedro Gonzalez",
     "price": 4.96,
     "concept": "Compra de Cinturón de Karate para competición infantil",
-    "total_price": 6.00,
+    "total_price": 6.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "15 de abril de 2023"
+    "date_issue": "2023-04-10"
   },
   {
     "receipt_number": "REC006",
@@ -356,12 +356,12 @@
     "paying_partner": "Laura Sanchez",
     "price": 18.18,
     "concept": "Compra de Guantilla karate kumite homologada RFEK con pulgar",
-    "total_price": 22.00,
+    "total_price": 22.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "10 de marzo de 2023"
+    "date_issue": "2023-03-10"
   },
   {
     "receipt_number": "REC005",
@@ -370,12 +370,12 @@
     "paying_partner": "Luis Rodriguez",
     "price": 41.32,
     "concept": "Compra de Casco homologado karate",
-    "total_price": 50.00,
+    "total_price": 50.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "5 de marzo de 2023"
+    "date_issue": "2023-03-05"
   },
   {
     "receipt_number": "REC004",
@@ -384,12 +384,12 @@
     "paying_partner": "Ana Martinez",
     "price": 24.79,
     "concept": "Compra de Cinturón negro Mizuno bordado Karatedo",
-    "total_price": 30.00,
+    "total_price": 30.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "20 de febrero de 2023"
+    "date_issue": "2023-02-20"
   },
   {
     "receipt_number": "REC003",
@@ -398,12 +398,12 @@
     "paying_partner": "Carlos Lopez",
     "price": 19.83,
     "concept": "Compra de Karategi negro",
-    "total_price": 24.00,
+    "total_price": 24.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "15 de febrero de 2023"
+    "date_issue": "2023-02-15"
   },
   {
     "receipt_number": "REC002",
@@ -412,12 +412,12 @@
     "paying_partner": "Maria Gomez",
     "price": 4.96,
     "concept": "Compra de Cinturón de Karate para competición",
-    "total_price": 6.00,
+    "total_price": 6.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "10 de enero de 2023"
+    "date_issue": "2023-02-05"
   },
   {
     "receipt_number": "REC001",
@@ -426,11 +426,11 @@
     "paying_partner": "Javier Perez",
     "price": 17.36,
     "concept": "Compra de Karategi Mizuno KIAI",
-    "total_price": 21.00,
+    "total_price": 21.0,
     "logo": null,
     "address": "Av. Santa Cruz, 23, San Isidro, Granadilla de Abona",
     "phone": "123456789",
     "cif": "A12345678",
-    "date_issue": "5 de enero de 2023"
+    "date_issue": "2023-01-05"
   }
 ]
