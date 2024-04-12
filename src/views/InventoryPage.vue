@@ -153,12 +153,13 @@ const submitForm = () => {
             <th class="w-36 pb-4">Stock disponible</th>
             <th class="pb-4"></th>
           </thead>
-          <tbody class="even:bg-backgroundTable">
+          <tbody>
             <tr
               class="h-[70px] cursor-pointer"
-              v-for="product in filteredProducts"
+              v-for="(product, index) in filteredProducts"
               :key="product.id"
               @click="router.push('/' + product.id)"
+              :class="index % 2 === 0 ? 'bg-backgroundTable' : 'bg-white'"
             >
               <td class="w-[84px] px-6 relative">
                 <div

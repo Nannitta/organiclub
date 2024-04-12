@@ -11,3 +11,10 @@ export const getSuppliersService = async () => {
 
   return suppliers
 }
+
+export const getClientsService = async () => {
+  const data = await fetch('./src/mockups/Clients.json')
+  const clients = await data.json()
+
+  return clients
+}
