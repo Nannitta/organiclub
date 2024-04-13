@@ -11,6 +11,7 @@ const { products, alertStock } = storeToRefs(inventoryStore)
 const hoveredAvatar = ref(false)
 const hoveredSettings = ref(false)
 const hoveredPower = ref(false)
+const activeMenu = ref('Inventory')
 
 onMounted(async () => {
   await getProducts()
@@ -29,8 +30,13 @@ onMounted(async () => {
       </div>
       <nav>
         <ul class="*:font-roboto-medium *:font-semibold *:text-darkBlue">
-          <li title="Inventario" class="hover:bg-lightBlue bg-lightBlue">
-            <RouterLink to="/" class="flex items-center gap-3 p-4 cursor-pointer selected relative">
+          <li title="Inventario" class="hover:bg-lightBlue">
+            <RouterLink
+              to="/"
+              class="flex items-center gap-3 p-4 cursor-pointer relative"
+              :class="[activeMenu === 'Inventory' ? 'selected bg-lightBlue' : '']"
+              @click.prevent="activeMenu = 'Inventory'"
+            >
               <IconComponent name="inventory" :height="24" :width="24" />
               <div
                 v-if="alertStock"
@@ -39,26 +45,35 @@ onMounted(async () => {
               Inventario
             </RouterLink>
           </li>
-          <li
-            title="Gestión de ventas"
-            class="hover:bg-lightBlue flex items-center gap-3 p-4 cursor-pointer"
-          >
-            <RouterLink to="/sales" class="flex items-center gap-3 cursor-pointer relative w-full">
+          <li title="Gestión de ventas" class="hover:bg-lightBlue">
+            <RouterLink
+              to="/sales"
+              class="flex items-center gap-3 p-4 cursor-pointer relative"
+              :class="[activeMenu === 'Sales' ? 'selected bg-lightBlue' : '']"
+              @click.prevent="activeMenu = 'Sales'"
+            >
               <IconComponent name="sell" :height="24" :width="24" />
               Gestión de ventas
             </RouterLink>
           </li>
-          <li title="Recibos" class="hover:bg-lightBlue flex items-center gap-3 p-4 cursor-pointer">
+          <li title="Recibos" class="hover:bg-lightBlue">
             <RouterLink
               to="/receipts"
-              class="flex items-center gap-3 cursor-pointer relative w-full"
+              class="flex items-center gap-3 p-4 cursor-pointer relative"
+              :class="[activeMenu === 'Receipts' ? 'selected bg-lightBlue' : '']"
+              @click.prevent="activeMenu = 'Receipts'"
             >
               <IconComponent name="receipt" :height="24" :width="24" />
               Recibos
             </RouterLink>
           </li>
-          <li title="Pedidos" class="hover:bg-lightBlue flex items-center gap-3 p-4 cursor-pointer">
-            <RouterLink to="/orders" class="flex items-center gap-3 cursor-pointer relative w-full">
+          <li title="Pedidos" class="hover:bg-lightBlue">
+            <RouterLink
+              to="/orders"
+              class="flex items-center gap-3 p-4 cursor-pointer relative"
+              :class="[activeMenu === 'Orders' ? 'selected bg-lightBlue' : '']"
+              @click.prevent="activeMenu = 'Orders'"
+            >
               <IconComponent name="cart" :height="24" :width="24" />
               Pedidos
             </RouterLink>

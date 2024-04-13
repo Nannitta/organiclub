@@ -151,6 +151,7 @@ const submitForm = () => {
             <th class="w-36 pb-4">Categoría</th>
             <th class="w-36 pb-4">Precio</th>
             <th class="w-36 pb-4">Stock disponible</th>
+            <th class="w-36"></th>
             <th class="pb-4"></th>
           </thead>
           <tbody>
@@ -172,11 +173,13 @@ const submitForm = () => {
               <td class="text-center">{{ product.category }}</td>
               <td class="text-center">{{ product.price }}.00 €</td>
               <td class="text-center">{{ product.stock }}</td>
-              <td class="text-right pr-6 flex gap-4 justify-center items-center">
+              <td class="text-right pr-6" title="Ver producto">
                 <button @click="router.push('/' + product.id)">
                   <IconComponent name="arrow" :width="24" :height="24" />
                 </button>
-                <button @click="showDeleteConfirm(product)">
+              </td>
+              <td class="text-right pr-6">
+                <button @click="showDeleteConfirm(product)" title="Eliminar producto">
                   <IconComponent name="delete" :width="24" :height="24" />
                 </button>
               </td>
